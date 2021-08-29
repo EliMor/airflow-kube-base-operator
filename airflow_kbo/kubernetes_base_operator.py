@@ -7,7 +7,6 @@ from airflow.models.baseoperator import BaseOperator
 
 class KubernetesBaseOperator(BaseOperator):
     """
-    Opinionated operator for kubernetes Job type execution.
     Only allow client to pass in yaml files
 
     :param yaml_file_name: name of yaml file to be executed
