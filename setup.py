@@ -10,9 +10,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     
 requirements = [
     "apache-airflow>=2.0.0",
-    "kubernetes>=11.0.0",
-    "Jinja2>=2.11.3"
-]
+    "kubernetes>=11.0.0"]
 
 requirements_tests = [
     "pytest"
