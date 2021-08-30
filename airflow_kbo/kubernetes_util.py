@@ -39,3 +39,14 @@ def get_kube_client(in_cluster=False, cluster_context=None, config_file=None):
     kube_client = k_client.ApiClient(configuration=client_config)
     return kube_client
 
+def base_yaml_validator(yaml, kind):
+    """
+    Ensure that the yaml obj passes some requirements,
+    1. must be a certain kind
+    2. must have a name and namespace field in metadata block
+    """
+    assert yaml["kind"] == kind
+    metadata = yaml["metadata"]
+    metadata["name"]
+    metadata["namespace"]
+    return True
